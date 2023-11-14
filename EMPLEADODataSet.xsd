@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EMPLEADODataSet" targetNamespace="http://tempuri.org/EMPLEADODataSet.xsd" xmlns:mstns="http://tempuri.org/EMPLEADODataSet.xsd" xmlns="http://tempuri.org/EMPLEADODataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EMPLEADOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EMPLEADOConnectionString (Settings)" PropertyReference="ApplicationSettings.PryTPCalvet.Properties.Settings.GlobalReference.Default.EMPLEADOConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DATOS ACADEMICOSTableAdapter" GeneratorDataComponentClassName="DATOS_ACADEMICOSTableAdapter" Name="DATOS ACADEMICOS" UserDataComponentName="DATOS ACADEMICOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EMPLEADOConnectionString (Settings)" DbObjectName="DATOS ACADEMICOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODIGO, [CURSOS QUE RECIBIO], [HORAS/ESTUDIO], [LUGAR DE ESTUDIO] FROM [DATOS ACADEMICOS]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DATOS LABORALESTableAdapter" GeneratorDataComponentClassName="DATOS_LABORALESTableAdapter" Name="DATOS LABORALES" UserDataComponentName="DATOS LABORALESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EMPLEADOConnectionString (Settings)" DbObjectName="DATOS LABORALES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODIGO, [AÑOS/EXPERIENCIA], [ULTIMO LUGAR DE TRABAJO], [CARGO DESEMPENADO], REMUNERACION FROM [DATOS LABORALES]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DATOS PERSONALESTableAdapter" GeneratorDataComponentClassName="DATOS_PERSONALESTableAdapter" Name="DATOS PERSONALES" UserDataComponentName="DATOS PERSONALESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EMPLEADOConnectionString (Settings)" DbObjectName="DATOS PERSONALES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODIGO, NOMBRE, APELLIDO, DIRECCIÒN, CIUDAD, TELEFONO, FECHA_NACIMIENTO FROM [DATOS PERSONALES]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EMPLEADODataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EMPLEADODataSet" msprop:Generator_DataSetName="EMPLEADODataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DATOS_x0020_ACADEMICOS" msprop:Generator_RowEvHandlerName="DATOS_ACADEMICOSRowChangeEventHandler" msprop:Generator_RowDeletedName="DATOS_ACADEMICOSRowDeleted" msprop:Generator_RowDeletingName="DATOS_ACADEMICOSRowDeleting" msprop:Generator_RowEvArgName="DATOS_ACADEMICOSRowChangeEvent" msprop:Generator_TablePropName="DATOS_ACADEMICOS" msprop:Generator_RowChangedName="DATOS_ACADEMICOSRowChanged" msprop:Generator_RowChangingName="DATOS_ACADEMICOSRowChanging" msprop:Generator_TableClassName="DATOS_ACADEMICOSDataTable" msprop:Generator_RowClassName="DATOS_ACADEMICOSRow" msprop:Generator_TableVarName="tableDATOS_ACADEMICOS" msprop:Generator_UserTableName="DATOS ACADEMICOS">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DATOS_x0020_LABORALES" msprop:Generator_RowEvHandlerName="DATOS_LABORALESRowChangeEventHandler" msprop:Generator_RowDeletedName="DATOS_LABORALESRowDeleted" msprop:Generator_RowDeletingName="DATOS_LABORALESRowDeleting" msprop:Generator_RowEvArgName="DATOS_LABORALESRowChangeEvent" msprop:Generator_TablePropName="DATOS_LABORALES" msprop:Generator_RowChangedName="DATOS_LABORALESRowChanged" msprop:Generator_RowChangingName="DATOS_LABORALESRowChanging" msprop:Generator_TableClassName="DATOS_LABORALESDataTable" msprop:Generator_RowClassName="DATOS_LABORALESRow" msprop:Generator_TableVarName="tableDATOS_LABORALES" msprop:Generator_UserTableName="DATOS LABORALES">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DATOS_x0020_PERSONALES" msprop:Generator_RowEvHandlerName="DATOS_PERSONALESRowChangeEventHandler" msprop:Generator_RowDeletedName="DATOS_PERSONALESRowDeleted" msprop:Generator_RowDeletingName="DATOS_PERSONALESRowDeleting" msprop:Generator_RowEvArgName="DATOS_PERSONALESRowChangeEvent" msprop:Generator_TablePropName="DATOS_PERSONALES" msprop:Generator_RowChangedName="DATOS_PERSONALESRowChanged" msprop:Generator_RowChangingName="DATOS_PERSONALESRowChanging" msprop:Generator_TableClassName="DATOS_PERSONALESDataTable" msprop:Generator_RowClassName="DATOS_PERSONALESRow" msprop:Generator_TableVarName="tableDATOS_PERSONALES" msprop:Generator_UserTableName="DATOS PERSONALES">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

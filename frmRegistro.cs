@@ -16,5 +16,17 @@ namespace PryTPCalvet
         {
             InitializeComponent();
         }
+
+
+
+        private void txtCUIT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsNumber(e.KeyChar) &&
+            e.KeyChar != ',' && e.KeyChar != (int)Keys.Back)
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

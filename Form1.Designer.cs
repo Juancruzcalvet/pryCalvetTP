@@ -1,6 +1,6 @@
 ﻿namespace PryTPCalvet
 {
-    partial class frmPrincipal
+    partial class frmInicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -149,7 +149,7 @@
             this.lblHora.TabIndex = 4;
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmPrincipal
+            // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,9 +159,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmPrincipal";
+            this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de gestión - Módulo Recursos Humanos";
+            this.Load += new System.EventHandler(this.frmInicio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
