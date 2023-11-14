@@ -43,6 +43,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblHora = new System.Windows.Forms.Label();
+            this.editorDeTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,9 +108,12 @@
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
             this.listadoToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.listadoToolStripMenuItem.Text = "Listado";
+            this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
             // herramientasToolStripMenuItem
             // 
+            this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editorDeTextoToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
@@ -149,6 +153,13 @@
             this.lblHora.TabIndex = 4;
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            this.editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            this.editorDeTextoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editorDeTextoToolStripMenuItem.Text = "Editor de texto";
+            this.editorDeTextoToolStripMenuItem.Click += new System.EventHandler(this.editorDeTextoToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +197,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }
 

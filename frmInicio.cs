@@ -35,5 +35,19 @@ namespace PryTPCalvet
         {
 
         }
+
+        private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEdicionTexto frmEdicionTexto = new frmEdicionTexto();
+            frmEdicionTexto.Show();
+            this.Hide();
+        }
+
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListado frmListado = new frmListado();
+            frmListado.Show();
+            this.Hide();
+        }
     }
 }

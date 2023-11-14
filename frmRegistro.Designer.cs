@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctFoto = new System.Windows.Forms.PictureBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,16 +49,20 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtCUIT = new System.Windows.Forms.MaskedTextBox();
+            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabDireccion.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.dtpNacimiento);
             this.groupBox1.Controls.Add(this.txtCUIT);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.pctFoto);
             this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
@@ -66,28 +70,30 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(504, 123);
+            this.groupBox1.Size = new System.Drawing.Size(504, 144);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // pictureBox1
+            // pctFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(369, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 105);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pctFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctFoto.Location = new System.Drawing.Point(369, 12);
+            this.pctFoto.Name = "pctFoto";
+            this.pctFoto.Size = new System.Drawing.Size(129, 105);
+            this.pctFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto.TabIndex = 7;
+            this.pctFoto.TabStop = false;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(131, 90);
+            this.txtApellido.Location = new System.Drawing.Point(131, 66);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 6;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(131, 55);
+            this.txtNombre.Location = new System.Drawing.Point(131, 39);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 5;
@@ -95,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 93);
+            this.label3.Location = new System.Drawing.Point(24, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
@@ -104,7 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 58);
+            this.label2.Location = new System.Drawing.Point(24, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -113,7 +119,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 23);
+            this.label1.Location = new System.Drawing.Point(24, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 0;
@@ -229,6 +235,7 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegistrar
             // 
@@ -238,16 +245,33 @@
             this.btnRegistrar.TabIndex = 3;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtCUIT
             // 
-            this.txtCUIT.Location = new System.Drawing.Point(131, 20);
+            this.txtCUIT.Location = new System.Drawing.Point(131, 13);
             this.txtCUIT.Mask = "00-00000000-0";
             this.txtCUIT.Name = "txtCUIT";
             this.txtCUIT.PromptChar = ' ';
             this.txtCUIT.Size = new System.Drawing.Size(100, 20);
             this.txtCUIT.TabIndex = 8;
             this.txtCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox1_KeyPress);
+            // 
+            // dtpNacimiento
+            // 
+            this.dtpNacimiento.Location = new System.Drawing.Point(131, 97);
+            this.dtpNacimiento.Name = "dtpNacimiento";
+            this.dtpNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpNacimiento.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 98);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Fecha de nacimiento";
             // 
             // frmRegistro
             // 
@@ -260,9 +284,10 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRegistro";
             this.Text = "Registro de Empleados";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabDireccion.ResumeLayout(false);
             this.tabDireccion.PerformLayout();
@@ -291,7 +316,9 @@
         private System.Windows.Forms.TabPage tabContacto;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctFoto;
         private System.Windows.Forms.MaskedTextBox txtCUIT;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpNacimiento;
     }
 }
