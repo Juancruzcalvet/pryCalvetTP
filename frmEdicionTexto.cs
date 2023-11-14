@@ -40,5 +40,15 @@ namespace PryTPCalvet
             rtxTexto.SelectionStart = buscar.Length;
             rtxTexto.ScrollToCaret();
         }
+
+        private void rtxTexto_TextChanged(object sender, EventArgs e)
+        {
+            lblContador.Text = "Cantidad de caraceteres: " + (rtxTexto.Text.Length);
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

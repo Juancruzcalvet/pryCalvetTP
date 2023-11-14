@@ -42,7 +42,7 @@
             this.cmdCaracter = new System.Windows.Forms.Button();
             this.cmdEspacios = new System.Windows.Forms.Button();
             this.txtCaracter = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblContador = new System.Windows.Forms.Label();
             this.rtxTexto = new System.Windows.Forms.RichTextBox();
             this.grpHerramientas.SuspendLayout();
             this.grpQuitar.SuspendLayout();
@@ -74,6 +74,7 @@
             this.cmdGuardar.TabIndex = 3;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // grpHerramientas
             // 
@@ -179,14 +180,14 @@
             this.txtCaracter.Size = new System.Drawing.Size(100, 20);
             this.txtCaracter.TabIndex = 2;
             // 
-            // label1
+            // lblContador
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 291);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Cantidad de caracteres: -";
+            this.lblContador.AutoSize = true;
+            this.lblContador.Location = new System.Drawing.Point(12, 291);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(126, 13);
+            this.lblContador.TabIndex = 10;
+            this.lblContador.Text = "Cantidad de caracteres: -";
             // 
             // rtxTexto
             // 
@@ -195,6 +196,7 @@
             this.rtxTexto.Size = new System.Drawing.Size(581, 126);
             this.rtxTexto.TabIndex = 11;
             this.rtxTexto.Text = "";
+            this.rtxTexto.TextChanged += new System.EventHandler(this.rtxTexto_TextChanged);
             // 
             // frmEdicionTexto
             // 
@@ -202,7 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 327);
             this.Controls.Add(this.rtxTexto);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblContador);
             this.Controls.Add(this.grpQuitar);
             this.Controls.Add(this.grpHerramientas);
             this.Controls.Add(this.cmdGuardar);
@@ -234,7 +236,7 @@
         private System.Windows.Forms.TextBox txtCaracter;
         private System.Windows.Forms.Label lblModificar;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblContador;
         private System.Windows.Forms.RichTextBox rtxTexto;
     }
 }
