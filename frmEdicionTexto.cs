@@ -29,16 +29,34 @@ namespace PryTPCalvet
         {
             buscar = txtBuscar.Text;
             modificiar = txtModificiar.Text;
-            
-            
+
+            rtxTexto.Text = rtxTexto.Text.Replace(buscar, modificiar);
+
+
+
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             buscar = txtBuscar.Text;
-            rtxTexto.Focus();
-            rtxTexto.SelectionStart = buscar.Length;
-            rtxTexto.ScrollToCaret();
+            string[] words = buscar.Split(',');
+            foreach (string word in words)
+            {
+                int startindex = 0;
+                while (startindex < rtxTexto.TextLength)
+                {
+                    int wordstartIndex = rtxTexto.Find(word, startindex, RichTextBoxFinds.None);
+                    if (wordstartIndex != -1)
+                    {
+                        rtxTexto.SelectionStart = wordstartIndex;
+                        rtxTexto.SelectionLength = word.Length;
+                        rtxTexto.SelectionBackColor = Color.Yellow;
+                    }
+                    else
+                        break;
+                    startindex += wordstartIndex + word.Length;
+                }
+            }
         }
 
         private void rtxTexto_TextChanged(object sender, EventArgs e)
@@ -46,7 +64,27 @@ namespace PryTPCalvet
             lblContador.Text = "Cantidad de caraceteres: " + (rtxTexto.Text.Length);
         }
 
+
+        private void cmdCaracter_Click(object sender, EventArgs e)
+        {
+            rtxTexto.Text = rtxTexto.Text.Replace(txtCaracter.Text, "");
+        }
+
+        private void cmdEspacios_Click(object sender, EventArgs e)
+        {
+            rtxTexto.Text = rtxTexto.Text.TrimStart();
+        }
+
+        private void cmdNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cmdCancelar_Click(object sender, EventArgs e)
         {
 
         }

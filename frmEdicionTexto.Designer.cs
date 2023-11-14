@@ -56,6 +56,7 @@
             this.cmdCancelar.TabIndex = 1;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdNuevo
             // 
@@ -65,6 +66,7 @@
             this.cmdNuevo.TabIndex = 2;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.UseVisualStyleBackColor = true;
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // cmdGuardar
             // 
@@ -163,6 +165,7 @@
             this.cmdCaracter.TabIndex = 8;
             this.cmdCaracter.Text = "Caracter";
             this.cmdCaracter.UseVisualStyleBackColor = true;
+            this.cmdCaracter.Click += new System.EventHandler(this.cmdCaracter_Click);
             // 
             // cmdEspacios
             // 
@@ -172,6 +175,7 @@
             this.cmdEspacios.TabIndex = 9;
             this.cmdEspacios.Text = "Espacios";
             this.cmdEspacios.UseVisualStyleBackColor = true;
+            this.cmdEspacios.Click += new System.EventHandler(this.cmdEspacios_Click);
             // 
             // txtCaracter
             // 
