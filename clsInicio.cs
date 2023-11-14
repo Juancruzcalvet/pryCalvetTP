@@ -114,6 +114,52 @@ namespace PryTPCalvet
                 }
             }
         }
+        //Contiene int i para poder cambiar el indice de la columna buscada. 
+        //String busca es donde se inserta la búsqueda (x nombre,apellido,etc)
+        public void Buscar(string Busca, DataGridView Grilla, int i)
+        {
+            
+            try
+            {
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "DATOS PERSONALES";
+                lectorBD = comandoBD.ExecuteReader();
+                //Booleano para saber si se encuentra el valor deseado o no.
+                bool seEncuentra = false;
+                Grilla.Columns.Add("CODIGO", "CODIGO");
+                Grilla.Columns.Add("NOMBRE", "NOMBRE");
+                Grilla.Columns.Add("APELLIDO", "APELLIDO");
+                Grilla.Columns.Add("DIRECCIÒN", "DIRECCIÒN");
+                Grilla.Columns.Add("CIUDAD", "CIUDAD");
+                Grilla.Columns.Add("TELEFONO", "TELEFONO");
+                Grilla.Columns.Add("FECHA_NACIMIENTO", "FECHA_NACIMIENTO");
+                //mientras haya filas
+                if (lectorBD.HasRows)
+                {
+                    //leemos registro por registro
+                    while (lectorBD.Read())
+                    {
+                        //si valor = a lo ingresado por txt
+                        if ((lectorBD[i].ToString()) == Busca)
+                        {
+                            Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6]);
+                            seEncuentra = true;
+                        }
+                    }
+
+                    if (seEncuentra == false)
+                    {
+                        MessageBox.Show("Empleado no existe", "Consulta");
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                EstadoDeConexion = "Error:" + error.Message;
+            }
+        }
     }
 
 }

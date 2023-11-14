@@ -30,13 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabApellido = new System.Windows.Forms.TabPage();
-            this.tabDireccion = new System.Windows.Forms.TabPage();
-            this.lblBarrio = new System.Windows.Forms.Label();
-            this.txtBarrio = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
+            this.tabDireccion = new System.Windows.Forms.TabPage();
+            this.txtBarrio = new System.Windows.Forms.TextBox();
+            this.lblBarrio = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmdListar = new System.Windows.Forms.Button();
+            this.cmdListarBarrio = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabApellido.SuspendLayout();
             this.tabDireccion.SuspendLayout();
@@ -56,42 +57,15 @@
             // tabApellido
             // 
             this.tabApellido.Controls.Add(this.txtApellido);
+            this.tabApellido.Controls.Add(this.cmdListar);
             this.tabApellido.Controls.Add(this.lblApellido);
-            this.tabApellido.Location = new System.Drawing.Point(4, 29);
+            this.tabApellido.Location = new System.Drawing.Point(4, 22);
             this.tabApellido.Name = "tabApellido";
-            this.tabApellido.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabApellido.Size = new System.Drawing.Size(450, 67);
+            this.tabApellido.Padding = new System.Windows.Forms.Padding(3);
+            this.tabApellido.Size = new System.Drawing.Size(450, 74);
             this.tabApellido.TabIndex = 0;
             this.tabApellido.Text = "Apellido";
             this.tabApellido.UseVisualStyleBackColor = true;
-            // 
-            // tabDireccion
-            // 
-            this.tabDireccion.Controls.Add(this.txtBarrio);
-            this.tabDireccion.Controls.Add(this.lblBarrio);
-            this.tabDireccion.Location = new System.Drawing.Point(4, 22);
-            this.tabDireccion.Name = "tabDireccion";
-            this.tabDireccion.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabDireccion.Size = new System.Drawing.Size(450, 74);
-            this.tabDireccion.TabIndex = 1;
-            this.tabDireccion.Text = "Dirección";
-            this.tabDireccion.UseVisualStyleBackColor = true;
-            // 
-            // lblBarrio
-            // 
-            this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(130, 31);
-            this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(34, 13);
-            this.lblBarrio.TabIndex = 0;
-            this.lblBarrio.Text = "Barrio";
-            // 
-            // txtBarrio
-            // 
-            this.txtBarrio.Location = new System.Drawing.Point(224, 28);
-            this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(100, 20);
-            this.txtBarrio.TabIndex = 1;
             // 
             // txtApellido
             // 
@@ -109,6 +83,35 @@
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido";
             // 
+            // tabDireccion
+            // 
+            this.tabDireccion.Controls.Add(this.cmdListarBarrio);
+            this.tabDireccion.Controls.Add(this.txtBarrio);
+            this.tabDireccion.Controls.Add(this.lblBarrio);
+            this.tabDireccion.Location = new System.Drawing.Point(4, 22);
+            this.tabDireccion.Name = "tabDireccion";
+            this.tabDireccion.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDireccion.Size = new System.Drawing.Size(450, 74);
+            this.tabDireccion.TabIndex = 1;
+            this.tabDireccion.Text = "Dirección";
+            this.tabDireccion.UseVisualStyleBackColor = true;
+            // 
+            // txtBarrio
+            // 
+            this.txtBarrio.Location = new System.Drawing.Point(224, 28);
+            this.txtBarrio.Name = "txtBarrio";
+            this.txtBarrio.Size = new System.Drawing.Size(100, 20);
+            this.txtBarrio.TabIndex = 1;
+            // 
+            // lblBarrio
+            // 
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Location = new System.Drawing.Point(130, 31);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(34, 13);
+            this.lblBarrio.TabIndex = 0;
+            this.lblBarrio.Text = "Barrio";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -119,19 +122,29 @@
             // 
             // cmdListar
             // 
-            this.cmdListar.Location = new System.Drawing.Point(397, 114);
+            this.cmdListar.Location = new System.Drawing.Point(369, 48);
             this.cmdListar.Name = "cmdListar";
             this.cmdListar.Size = new System.Drawing.Size(75, 23);
             this.cmdListar.TabIndex = 2;
             this.cmdListar.Text = "Listar";
             this.cmdListar.UseVisualStyleBackColor = true;
+            this.cmdListar.Click += new System.EventHandler(this.cmdListar_Click);
+            // 
+            // cmdListarBarrio
+            // 
+            this.cmdListarBarrio.Location = new System.Drawing.Point(369, 45);
+            this.cmdListarBarrio.Name = "cmdListarBarrio";
+            this.cmdListarBarrio.Size = new System.Drawing.Size(75, 23);
+            this.cmdListarBarrio.TabIndex = 3;
+            this.cmdListarBarrio.Text = "Listar";
+            this.cmdListarBarrio.UseVisualStyleBackColor = true;
+            this.cmdListarBarrio.Click += new System.EventHandler(this.cmdListarBarrio_Click);
             // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 309);
-            this.Controls.Add(this.cmdListar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmListado";
@@ -158,5 +171,6 @@
         private System.Windows.Forms.Label lblBarrio;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button cmdListar;
+        private System.Windows.Forms.Button cmdListarBarrio;
     }
 }
