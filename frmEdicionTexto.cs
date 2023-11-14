@@ -72,19 +72,31 @@ namespace PryTPCalvet
 
         private void cmdEspacios_Click(object sender, EventArgs e)
         {
-            rtxTexto.Text = rtxTexto.Text.TrimStart();
+            rtxTexto.Text.Trim();
         }
 
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
-
+            rtxTexto.Text = "";
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+            string sw = "Texto.secreto";
+            StreamWriter Escribir = new StreamWriter(sw, false);
+            Escribir.Write(rtxTexto.Text);
+            MessageBox.Show("Guardado");
 
         }
         private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
+            this.Hide();
+
+        }
+
+        private void frmEdicionTexto_Load(object sender, EventArgs e)
         {
 
         }

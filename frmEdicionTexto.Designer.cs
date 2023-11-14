@@ -216,6 +216,7 @@
             this.Controls.Add(this.cmdCancelar);
             this.Name = "frmEdicionTexto";
             this.Text = "Editor texto";
+            this.Load += new System.EventHandler(this.frmEdicionTexto_Load);
             this.grpHerramientas.ResumeLayout(false);
             this.grpHerramientas.PerformLayout();
             this.grpQuitar.ResumeLayout(false);
