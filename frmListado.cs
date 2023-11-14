@@ -22,7 +22,7 @@ namespace PryTPCalvet
 
         private void cmdListar_Click(object sender, EventArgs e)
         {
-            int i = 1;
+            int i = 2;
             objInicio.Buscar(txtApellido.Text, dataGridView1, i);
 
         }

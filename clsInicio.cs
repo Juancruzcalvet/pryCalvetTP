@@ -16,15 +16,15 @@ namespace PryTPCalvet
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
-        OleDbDataAdapter adaptadorBD;
+        
         DataSet objDS = new DataSet();
-        string RutaConexionBase;
+        
         String EstadoDeConexion="";
         public void ConectarBD()
         {
             try
             {
-                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source =C:\\Users\\Juan\\Desktop\\pryCalvetTP\\DB\\EMPLEADO.accdb");
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\DB\\EMPLEADO.accdb");
                 conexionBD.Open();
    
 

@@ -47,11 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsInicio.cs" />
-    <Compile Include="EMPLEADODataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EMPLEADODataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmEdicionTexto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,17 +94,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="EMPLEADODataSet.xsc">
-      <DependentUpon>EMPLEADODataSet.xsd</DependentUpon>
-    </None>
-    <None Include="EMPLEADODataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EMPLEADODataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EMPLEADODataSet.xss">
-      <DependentUpon>EMPLEADODataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
