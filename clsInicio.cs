@@ -160,6 +160,38 @@ namespace PryTPCalvet
                 EstadoDeConexion = "Error:" + error.Message;
             }
         }
-    }
+        public void CargarGrilla(DataGridView Grilla)
+        {
 
+            try
+            {
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "DATOS PERSONALES";
+                lectorBD = comandoBD.ExecuteReader();
+                Grilla.Columns.Add("CODIGO", "CODIGO");
+                Grilla.Columns.Add("NOMBRE", "NOMBRE");
+                Grilla.Columns.Add("APELLIDO", "APELLIDO");
+                Grilla.Columns.Add("DIRECCIÒN", "DIRECCIÒN");
+                Grilla.Columns.Add("CIUDAD", "CIUDAD");
+                Grilla.Columns.Add("TELEFONO", "TELEFONO");
+                Grilla.Columns.Add("FECHA_NACIMIENTO", "FECHA_NACIMIENTO");
+                //mientras haya filas
+                if (lectorBD.HasRows)
+                {
+                    //leemos registro por registro
+                    while (lectorBD.Read())
+                    {
+                        Grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6]);
+                    }
+
+                }
+            }
+            catch (Exception error)
+            {
+                EstadoDeConexion = "Error:" + error.Message;
+            }
+        }
+    }
 }

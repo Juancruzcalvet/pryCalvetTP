@@ -24,7 +24,6 @@ namespace PryTPCalvet
         }
         string buscar = "";
         string modificiar = "";
-        string caracter = "";
         private void cmdModificar_Click(object sender, EventArgs e)
         {
             buscar = txtBuscar.Text;
@@ -72,7 +71,7 @@ namespace PryTPCalvet
 
         private void cmdEspacios_Click(object sender, EventArgs e)
         {
-            rtxTexto.Text.Trim();
+            rtxTexto.Text = rtxTexto.Text.Replace(" ", "");
         }
 
         private void cmdNuevo_Click(object sender, EventArgs e)
@@ -98,7 +97,7 @@ namespace PryTPCalvet
 
         private void frmEdicionTexto_Load(object sender, EventArgs e)
         {
-
         }
     }
+    
 }

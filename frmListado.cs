@@ -32,5 +32,22 @@ namespace PryTPCalvet
             int i = 3;
             objInicio.Buscar(txtBarrio.Text, dataGridView1, i);
         }
+
+        private void cmdVolver_Click(object sender, EventArgs e)
+        {
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
+            this.Hide();
+        }
+
+        private void frmListado_Load(object sender, EventArgs e)
+        {
+            objInicio.CargarGrilla(dataGridView1);
+        }
+
+        private void cmdMostrar_Click(object sender, EventArgs e)
+        {
+            objInicio.CargarGrilla(dataGridView1);
+        }
     }
 }

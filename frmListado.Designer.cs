@@ -31,13 +31,15 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabApellido = new System.Windows.Forms.TabPage();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.cmdListar = new System.Windows.Forms.Button();
             this.lblApellido = new System.Windows.Forms.Label();
             this.tabDireccion = new System.Windows.Forms.TabPage();
+            this.cmdListarBarrio = new System.Windows.Forms.Button();
             this.txtBarrio = new System.Windows.Forms.TextBox();
             this.lblBarrio = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmdListar = new System.Windows.Forms.Button();
-            this.cmdListarBarrio = new System.Windows.Forms.Button();
+            this.cmdVolver = new System.Windows.Forms.Button();
+            this.cmdMostrar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabApellido.SuspendLayout();
             this.tabDireccion.SuspendLayout();
@@ -74,6 +76,16 @@
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 3;
             // 
+            // cmdListar
+            // 
+            this.cmdListar.Location = new System.Drawing.Point(369, 48);
+            this.cmdListar.Name = "cmdListar";
+            this.cmdListar.Size = new System.Drawing.Size(75, 23);
+            this.cmdListar.TabIndex = 2;
+            this.cmdListar.Text = "Listar";
+            this.cmdListar.UseVisualStyleBackColor = true;
+            this.cmdListar.Click += new System.EventHandler(this.cmdListar_Click);
+            // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
@@ -95,6 +107,16 @@
             this.tabDireccion.TabIndex = 1;
             this.tabDireccion.Text = "Dirección";
             this.tabDireccion.UseVisualStyleBackColor = true;
+            // 
+            // cmdListarBarrio
+            // 
+            this.cmdListarBarrio.Location = new System.Drawing.Point(369, 45);
+            this.cmdListarBarrio.Name = "cmdListarBarrio";
+            this.cmdListarBarrio.Size = new System.Drawing.Size(75, 23);
+            this.cmdListarBarrio.TabIndex = 3;
+            this.cmdListarBarrio.Text = "Listar";
+            this.cmdListarBarrio.UseVisualStyleBackColor = true;
+            this.cmdListarBarrio.Click += new System.EventHandler(this.cmdListarBarrio_Click);
             // 
             // txtBarrio
             // 
@@ -120,36 +142,39 @@
             this.dataGridView1.Size = new System.Drawing.Size(454, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // cmdListar
+            // cmdVolver
             // 
-            this.cmdListar.Location = new System.Drawing.Point(369, 48);
-            this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(75, 23);
-            this.cmdListar.TabIndex = 2;
-            this.cmdListar.Text = "Listar";
-            this.cmdListar.UseVisualStyleBackColor = true;
-            this.cmdListar.Click += new System.EventHandler(this.cmdListar_Click);
+            this.cmdVolver.Location = new System.Drawing.Point(18, 120);
+            this.cmdVolver.Name = "cmdVolver";
+            this.cmdVolver.Size = new System.Drawing.Size(75, 23);
+            this.cmdVolver.TabIndex = 2;
+            this.cmdVolver.Text = "Volver";
+            this.cmdVolver.UseVisualStyleBackColor = true;
+            this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
-            // cmdListarBarrio
+            // cmdMostrar
             // 
-            this.cmdListarBarrio.Location = new System.Drawing.Point(369, 45);
-            this.cmdListarBarrio.Name = "cmdListarBarrio";
-            this.cmdListarBarrio.Size = new System.Drawing.Size(75, 23);
-            this.cmdListarBarrio.TabIndex = 3;
-            this.cmdListarBarrio.Text = "Listar";
-            this.cmdListarBarrio.UseVisualStyleBackColor = true;
-            this.cmdListarBarrio.Click += new System.EventHandler(this.cmdListarBarrio_Click);
+            this.cmdMostrar.Location = new System.Drawing.Point(375, 120);
+            this.cmdMostrar.Name = "cmdMostrar";
+            this.cmdMostrar.Size = new System.Drawing.Size(97, 23);
+            this.cmdMostrar.TabIndex = 3;
+            this.cmdMostrar.Text = "Mostrar todos";
+            this.cmdMostrar.UseVisualStyleBackColor = true;
+            this.cmdMostrar.Click += new System.EventHandler(this.cmdMostrar_Click);
             // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 309);
+            this.Controls.Add(this.cmdMostrar);
+            this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Empleados";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabApellido.ResumeLayout(false);
             this.tabApellido.PerformLayout();
@@ -172,5 +197,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button cmdListar;
         private System.Windows.Forms.Button cmdListarBarrio;
+        private System.Windows.Forms.Button cmdVolver;
+        private System.Windows.Forms.Button cmdMostrar;
     }
 }
